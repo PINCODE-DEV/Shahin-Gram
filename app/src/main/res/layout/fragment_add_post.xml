@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray2">
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/img_addPostFragment_select"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_add_post" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/txt_addPostFragment_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_addPostFragment_select"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/size_16dp"
+        android:text="Click for Add Post"
+        android:textColor="@color/black"
+        android:textSize="@dimen/size_22sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_addPostFragment_post"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginLeft="@dimen/size_12dp"
+        android:layout_marginTop="@dimen/size_48dp"
+        android:layout_marginRight="@dimen/size_12dp"
+        android:visibility="invisible">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/size_20dp"
+            app:cardCornerRadius="@dimen/size_12dp"
+            app:cardElevation="4dp">
+
+            <ImageView
+                android:id="@+id/img_addPostFragment_Image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY" />
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:id="@+id/rl_addPostFragment_delete"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/shape_circular_profile"
+            android:elevation="6dp"
+            android:padding="5dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_delete_red" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/edt_addPostFragment_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_addPostFragment_post"
+        android:layout_marginLeft="@dimen/size_20dp"
+        android:layout_marginTop="@dimen/size_24dp"
+        android:layout_marginRight="@dimen/size_20dp"
+        android:background="@drawable/shape_edt_login"
+        android:hint="type post description..."
+        android:padding="@dimen/size_15dp"
+        android:visibility="invisible" />
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:visibility="gone"
+        android:id="@+id/progress_addPostFragment_progress"
+        android:layout_centerInParent="true"
+        style="@style/AVLoadingIndicatorView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:indicatorColor="@color/colorAccent"
+        app:indicatorName="LineScaleIndicator" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_addPostFragment_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="@dimen/size_16dp"
+        android:layout_marginBottom="70dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:src="@drawable/ic_arrow_right_white"
+        android:visibility="invisible"
+        app:elevation="6dp"
+        app:fabCustomSize="60dp"
+        app:rippleColor="@color/colorAccent" />
+
+</RelativeLayout>

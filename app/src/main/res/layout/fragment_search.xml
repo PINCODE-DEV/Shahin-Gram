@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        app:elevation="0dp"
+        android:background="@color/gray2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            app:layout_scrollFlags="scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_searchFragment_search"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/shape_edt_search"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edt_searchFragment_search"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/ic_search_gray"
+                    android:drawablePadding="12dp"
+                    android:ellipsize="middle"
+                    android:hint="Search"
+                    android:singleLine="true"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/txt_searchFragment_notFound"
+                android:layout_marginTop="@dimen/size_24dp"
+                android:layout_marginBottom="@dimen/size_16dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/size_16sp"
+                android:text="No user with this profile was found"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/size_4dp"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:visibility="gone"
+            android:id="@+id/rv_searchFragment_users"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="56dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_searchFragment_posts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/size_56dp"/>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

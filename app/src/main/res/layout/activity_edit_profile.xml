@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray2"
+    android:orientation="vertical"
+    tools:context=".Profile.EditProfileActivity">
+
+    <ImageView
+        android:id="@+id/img_editProfileActivity_back"
+        android:layout_margin="@dimen/size_12dp"
+        android:src="@drawable/ic_back_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/ll_editProfileActivity_changeProf"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_marginTop="@dimen/size_24dp"
+            android:id="@+id/img_editProfileActivity_profile"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            app:civ_shadow_color="@color/gray5"
+            app:civ_shadow_radius="@dimen/size_8dp"
+            app:civ_border_color="@color/colorAccent"
+            app:civ_border_width="2dp"
+            tools:src="@drawable/ic_show_pass" />
+
+        <TextView
+            android:layout_marginTop="@dimen/size_8dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/size_18sp"
+            android:text="change profile image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_editProfileActivity_username"
+        android:layout_marginTop="@dimen/size_32dp"
+        android:layout_marginRight="@dimen/size_12dp"
+        android:layout_marginLeft="@dimen/size_12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:textColor="@color/black"
+            android:backgroundTint="@color/gray2"
+            android:hint="@string/edt_username_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_editProfileActivity_password"
+        android:layout_marginTop="@dimen/size_12dp"
+        android:layout_marginRight="@dimen/size_12dp"
+        android:layout_marginLeft="@dimen/size_12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:textColor="@color/black"
+            android:backgroundTint="@color/gray2"
+            android:hint="@string/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="TextFields" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_editProfileActivity_bio"
+        android:layout_marginTop="@dimen/size_12dp"
+        android:layout_marginRight="@dimen/size_12dp"
+        android:layout_marginLeft="@dimen/size_12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:textColor="@color/black"
+            android:backgroundTint="@color/gray2"
+            android:hint="Bio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            tools:ignore="Autofill" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_editProfileActivity_email"
+        android:layout_marginTop="@dimen/size_12dp"
+        android:layout_marginRight="@dimen/size_12dp"
+        android:layout_marginLeft="@dimen/size_12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:textColor="@color/black"
+            android:backgroundTint="@color/gray2"
+            android:hint="Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_editProfileActivity_saveChange"
+        android:layout_marginLeft="@dimen/size_12dp"
+        android:layout_marginRight="@dimen/size_12dp"
+        android:layout_marginTop="@dimen/size_24dp"
+        android:text="Save Changes!"
+        android:background="@drawable/shape_btn_edit_prof"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

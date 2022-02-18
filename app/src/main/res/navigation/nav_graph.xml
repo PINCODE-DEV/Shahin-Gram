@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_Splash">
+
+    <fragment
+        android:id="@+id/fragment_Home"
+        android:name="com.example.shahingram.Home.Fragment_Home"
+        android:label="Fragment_Home">
+        <action
+            app:enterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_in_right"
+            android:id="@+id/action_fragment_Home_to_fragment_Story"
+            app:destination="@id/fragment_Story" />
+        <action
+            app:enterAnim="@anim/nav_next"
+            android:id="@+id/action_fragment_Home_to_fragment_Search"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/nav_graph"
+            app:destination="@id/fragment_Search"/>
+        <action
+            app:enterAnim="@anim/nav_next"
+            android:id="@+id/action_fragment_Home_to_fragment_Like"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/nav_graph"
+            app:destination="@id/fragment_Like" />
+        <action
+            app:enterAnim="@anim/nav_next"
+            android:id="@+id/action_fragment_Home_to_fragment_AddPost"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/nav_graph"
+            app:destination="@id/fragment_AddPost"/>
+        <action
+            app:enterAnim="@anim/nav_next"
+            android:id="@+id/action_fragment_Home_to_fragment_Profile"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/nav_graph"
+            app:destination="@id/fragment_Profile"/>
+        <action
+            app:enterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_in_right"
+            android:id="@+id/action_fragment_Home_to_fragment_Comments"
+            app:destination="@id/fragment_Comments" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_Story"
+        android:name="com.example.shahingram.Home.Fragment_Story"
+        android:label="Fragment_Story"
+        app:popUpToInclusive="true" >
+        <argument
+            android:name="story"
+            app:argType="com.example.shahingram.Home.Story" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_Search"
+        android:name="com.example.shahingram.Search.Fragment_Search"
+        android:label="Fragment_Search" >
+        <action
+            app:enterAnim="@anim/slide_in_left"
+            android:id="@+id/action_fragment_Search_to_fragment_Home"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/nav_graph"
+            app:destination="@id/fragment_Home"/>
+        <action
+            app:enterAnim="@anim/nav_next"
+            android:id="@+id/action_fragment_Search_to_fragment_AddPost"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/nav_graph"
+            app:destination="@id/fragment_AddPost" />
+        <action
+            app:enterAnim="@anim/nav_next"
+            android:id="@+id/action_fragment_Search_to_fragment_Like"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/nav_graph"
+            app:destination="@id/fragment_Like" />
+        <action
+            app:enterAnim="@anim/nav_next"
+            android:id="@+id/action_fragment_Search_to_fragment_Profile"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/nav_graph"
+            app:destination="@id/fragment_Profile" />
+        <action
+            app:enterAnim="@anim/nav_next"
+            app:popExitAnim="@anim/slide_in_right"
+            android:id="@+id/action_fragment_Search_to_fragment_Posts"
+            app:destination="@id/fragment_Posts" />
+        <action
+            app:enterAnim="@anim/nav_next"
+            app:popExitAnim="@anim/slide_in_right"
+            android:id="@+id/action_fragment_Search_to_fragment_UserProf"
+            app:destination="@+id/fragment_Profile"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_AddPost"
+        android:name="com.example.shahingram.AddPost.Fragment_AddPost"
+        android:label="Fragment_AddPost" >
+        <action
+            app:enterAnim="@anim/slide_in_left"
+            android:id="@+id/action_fragment_AddPost_to_fragment_Home"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/nav_graph"
+            app:destination="@id/fragment_Home" />
+        <action
+            app:enterAnim="@anim/slide_in_left"
+            android:id="@+id/action_fragment_AddPost_to_fragment_Search"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/nav_graph"
+            app:destination="@id/fragment_Search" />
+        <action
+            app:enterAnim="@anim/nav_next"
+            android:id="@+id/action_fragment_AddPost_to_fragment_Like"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/nav_graph"
+            app:destination="@id/fragment_Like" />
+        <action
+            app:enterAnim="@anim/nav_next"
+            android:id="@+id/action_fragment_AddPost_to_fragment_Profile"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/nav_graph"
+            app:destination="@id/fragment_Profile" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_Like"
+        android:name="com.example.shahingram.Like.Fragment_Like"
+        android:label="Fragment_Like">
+        <action
+            app:enterAnim="@anim/slide_in_left"
+            android:id="@+id/action_fragment_Like_to_fragment_Home"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/nav_graph"
+            app:destination="@id/fragment_Home" />
+        <action
+            app:enterAnim="@anim/slide_in_left"
+            android:id="@+id/action_fragment_Like_to_fragment_Search"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/nav_graph"
+            app:destination="@id/fragment_Search" />
+        <action
+            app:enterAnim="@anim/slide_in_left"
+            android:id="@+id/action_fragment_Like_to_fragment_AddPost"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/nav_graph"
+            app:destination="@id/fragment_AddPost" />
+        <action
+            app:enterAnim="@anim/nav_next"
+            android:id="@+id/action_fragment_Like_to_fragment_Profile"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/nav_graph"
+            app:destination="@id/fragment_Profile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_Profile"
+        android:name="com.example.shahingram.Profile.Fragment_Profile"
+        android:label="Fragment_Profile" >
+        <action
+            app:enterAnim="@anim/slide_in_left"
+            android:id="@+id/action_fragment_Profile_to_fragment_Home"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/nav_graph"
+            app:destination="@id/fragment_Home" />
+        <action
+            app:enterAnim="@anim/slide_in_left"
+            android:id="@+id/action_fragment_Profile_to_fragment_Search"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/nav_graph"
+            app:destination="@id/fragment_Search" />
+        <action
+            app:enterAnim="@anim/slide_in_left"
+            android:id="@+id/action_fragment_Profile_to_fragment_AddPost"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/nav_graph"
+            app:destination="@id/fragment_AddPost" />
+        <action
+            app:enterAnim="@anim/slide_in_left"
+            android:id="@+id/action_fragment_Profile_to_fragment_Like"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/nav_graph"
+            app:destination="@id/fragment_Like" />
+        <action
+            app:enterAnim="@anim/nav_next"
+            app:popExitAnim="@anim/slide_in_right"
+            android:id="@+id/action_fragment_Profile_to_fragment_Posts"
+            app:destination="@id/fragment_Posts" />
+        <action
+            app:enterAnim="@anim/nav_next"
+            app:popExitAnim="@anim/slide_in_right"
+            android:id="@+id/action_fragment_Profile_to_fragment_Saved"
+            app:destination="@+id/fragment_Saved"/>
+        <argument
+            android:name="profInfo"
+            app:argType="com.example.shahingram.Profile.UserProfPrev" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_Posts"
+        android:name="com.example.shahingram.Profile.Fragment_Posts"
+        android:label="Fragment_Posts" >
+        <argument
+            android:name="post"
+            app:argType="com.example.shahingram.Home.Post" />
+        <action
+            app:enterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_in_right"
+            android:id="@+id/action_fragment_Posts_to_fragment_Comments"
+            app:destination="@id/fragment_Comments" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_Comments"
+        android:name="com.example.shahingram.Home.Fragment_Comments"
+        android:label="Fragment_Comments" >
+        <argument
+            android:name="my_comment"
+            app:argType="com.example.shahingram.Home.MyCommentModel"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_Saved"
+        android:name="com.example.shahingram.Profile.Fragment_Saved"
+        android:label="Fragment_Saved">
+
+        <action
+            app:enterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_in_right"
+            android:id="@+id/action_fragment_Saved_to_fragment_Comments"
+            app:destination="@id/fragment_Comments" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_Splash"
+        android:name="com.example.shahingram.Home.Fragment_SplashScreen"
+        android:label="Fragment_Splash">
+
+        <action
+            app:enterAnim="@anim/nav_next"
+            android:id="@+id/action_fragment_Splash_to_fragment_Home"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/nav_graph"
+            app:destination="@id/fragment_Home"/>
+
+    </fragment>
+
+</navigation>

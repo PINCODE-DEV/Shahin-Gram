@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Home"
+        android:icon="@drawable/ic_home_gray"
+        android:id="@+id/item_bottomNav_home"
+        android:color="@color/colorPrimary"
+        android:checked="true"/>
+    <item
+        android:title="Search"
+        android:icon="@drawable/ic_search_gray"
+        android:id="@+id/item_bottomNav_search"
+        android:color="@color/red"/>
+    <item
+        android:title="Add Post"
+        android:icon="@drawable/ic_add_gray"
+        android:id="@+id/item_bottomNav_add"
+        android:color="@color/green"/>
+    <item
+        android:title="Like"
+        android:icon="@drawable/ic_like_gray"
+        android:id="@+id/item_bottomNav_like"
+        android:color="@color/red"/>
+    <item
+        android:title="Profile"
+        android:icon="@drawable/ic_profile_gray"
+        android:id="@+id/item_bottomNav_profile"
+        android:color="@color/colorAccent"/>
+</menu>

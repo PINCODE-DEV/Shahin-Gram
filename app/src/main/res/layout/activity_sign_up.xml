@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LogIn.LogInActivity">
+
+    <ImageView
+        android:id="@+id/img_signUpActivity_logo"
+        android:layout_marginTop="64dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_instagram_logo"
+        android:layout_width="110dp"
+        android:layout_height="110dp"/>
+
+    <TextView
+        android:id="@+id/txt_signUpActivity_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_signUpActivity_logo"
+        android:layout_marginTop="@dimen/size_24dp"
+        android:fontFamily="@font/instagram_font"
+        android:gravity="center"
+        android:text="@string/shahin_gram"
+        android:textColor="@color/black"
+        android:textSize="@dimen/insta_logo_size" />
+
+    <TextView
+        android:id="@+id/txt_signUpActivity_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_signUpActivity_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/size_12dp"
+        android:text="create account in Shahin-Gram"
+        android:textColor="@color/gray5"
+        android:textSize="@dimen/size_18sp" />
+
+    <EditText
+        android:id="@+id/edt_signUpActivity_username"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/txt_signUpActivity_text"
+        android:layout_marginLeft="@dimen/size_18dp"
+        android:layout_marginTop="@dimen/size_18dp"
+        android:layout_marginRight="@dimen/size_18dp"
+        android:background="@drawable/shape_edt_login"
+        android:hint="@string/edt_username_hint"
+        android:padding="@dimen/size_15dp"
+        android:singleLine="true"
+        android:textSize="@dimen/size_16sp" />
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/size_18dp"
+        android:layout_marginRight="@dimen/size_18dp"
+        android:layout_marginLeft="@dimen/size_18dp"
+        android:layout_below="@+id/edt_signUpActivity_username"
+        android:id="@+id/ll_signUpActivity_password"
+        android:background="@drawable/shape_edt_login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:inputType="textPassword"
+            android:paddingLeft="@dimen/size_15dp"
+            android:background="@null"
+            android:singleLine="true"
+            android:minEms="6"
+            android:id="@+id/edt_signUpActivity_password"
+            android:textSize="@dimen/size_16sp"
+            android:hint="@string/password"
+            android:layout_width="0dp"
+            android:layout_weight="0.85"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:padding="@dimen/size_12dp"
+            android:gravity="center"
+            android:layout_weight="0.15"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:src="@drawable/ic_hide_pass"
+                android:id="@+id/img_signUpActivity_showPass"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <EditText
+        android:inputType="textEmailAddress"
+        android:id="@+id/edt_signUpActivity_email"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/ll_signUpActivity_password"
+        android:layout_marginLeft="@dimen/size_18dp"
+        android:layout_marginTop="@dimen/size_18dp"
+        android:layout_marginRight="@dimen/size_18dp"
+        android:background="@drawable/shape_edt_login"
+        android:hint="@string/email"
+        android:padding="@dimen/size_15dp"
+        android:singleLine="true"
+        android:textSize="@dimen/size_16sp" />
+
+    <Button
+        android:id="@+id/btn_signUpActivity_signUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edt_signUpActivity_email"
+        android:layout_marginLeft="@dimen/size_18dp"
+        android:layout_marginTop="@dimen/size_18dp"
+        android:layout_marginRight="@dimen/size_18dp"
+        android:backgroundTint="@color/blue_disable"
+        android:enabled="false"
+        android:padding="15dp"
+        android:text="@string/sign_up"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_16sp" />
+
+</RelativeLayout>

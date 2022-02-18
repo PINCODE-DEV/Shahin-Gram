@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:padding="@dimen/size_6dp"
+    app:cardElevation="@dimen/size_6dp"
+    android:id="@+id/cv_userProfPrev_parent"
+    app:cardCornerRadius="@dimen/size_12dp"
+    android:layout_marginLeft="@dimen/size_12dp"
+    android:layout_marginRight="@dimen/size_12dp"
+    android:layout_marginTop="@dimen/size_4dp"
+    android:layout_marginBottom="@dimen/size_4dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/img_userProfPrev_prof"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@dimen/size_8dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/colorAccent"
+            app:civ_shadow_color="@color/gray5"
+            app:civ_shadow_radius="8dp"
+            tools:src="@drawable/ic_show_pass" />
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/txt_userProfPrev_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size_8dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_18sp"
+            tools:ignore="RtlHardcoded"
+            tools:text="_.shahiin.__" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

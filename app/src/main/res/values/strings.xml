@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Shahin-Gram</string>
+    <string name="edt_username_hint">Username</string>
+    <string name="shahin_gram">Shahin-Gram</string>
+    <string name="password">Password</string>
+    <string name="log_in">Log In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="email">Email</string>
+    <string name="connection_error">خطا در ارتباط با سرور!</string>
+    <string name="add_comment">Add Your Comment Here</string>
+</resources>

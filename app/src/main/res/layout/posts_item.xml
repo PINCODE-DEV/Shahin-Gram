@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray2"
+    android:id="@+id/rl_postItem_parent"
+    android:layout_marginTop="@dimen/size_6dp"
+    tools:ignore="RtlHardcoded">
+
+    <RelativeLayout
+        android:id="@+id/rl_postItem_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/size_4dp">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/img_postItem_prof"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/size_4dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/colorAccent"
+            app:civ_shadow_color="@color/gray5"
+            app:civ_shadow_radius="8dp"
+            tools:src="@drawable/ic_show_pass" />
+
+        <TextView
+            android:id="@+id/txt_postItem_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size_6dp"
+            android:layout_toRightOf="@+id/img_postItem_prof"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size_16sp"
+            tools:ignore="RtlHardcoded"
+            tools:text="_.shahiin.__" />
+
+        <ImageView
+            android:id="@+id/img_postItem_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/size_12dp"
+            android:src="@drawable/ic_more_black" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_marginTop="4dp"
+        android:scaleType="fitXY"
+        tools:src="@mipmap/shahin_gram_logo"
+        android:id="@+id/img_postItem_post"
+        android:layout_below="@+id/rl_postItem_header"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"/>
+
+    <ImageView
+        android:id="@+id/img_postItem_like"
+        android:layout_marginLeft="@dimen/size_12dp"
+        android:layout_marginTop="@dimen/size_16dp"
+        android:layout_below="@+id/img_postItem_post"
+        android:src="@drawable/ic_un_like"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"/>
+
+    <ImageView
+        android:layout_toRightOf="@+id/img_postItem_like"
+        android:id="@+id/img_postItem_comment"
+        android:layout_marginLeft="@dimen/size_12dp"
+        android:layout_marginTop="@dimen/size_16dp"
+        android:layout_below="@+id/img_postItem_post"
+        android:src="@drawable/ic_comment"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:layout_toRightOf="@+id/img_postItem_comment"
+        android:id="@+id/img_postItem_send"
+        android:layout_marginLeft="@dimen/size_12dp"
+        android:layout_marginTop="@dimen/size_16dp"
+        android:layout_below="@+id/img_postItem_post"
+        android:src="@drawable/ic_send"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:layout_alignParentRight="true"
+        android:id="@+id/img_postItem_save"
+        android:layout_marginRight="@dimen/size_12dp"
+        android:layout_marginTop="@dimen/size_16dp"
+        android:layout_below="@+id/img_postItem_post"
+        android:src="@drawable/ic_un_save"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/txt_postItem_likeCount"
+        android:layout_marginLeft="@dimen/size_12dp"
+        android:layout_marginTop="@dimen/size_12dp"
+        android:layout_below="@+id/img_postItem_like"
+        android:textSize="@dimen/size_16sp"
+        android:textColor="@color/black"
+        tools:text="4,890 view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/txt_postItem_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_postItem_likeCount"
+        android:layout_marginTop="@dimen/size_4dp"
+        android:padding="8dp"
+        android:textColor="@color/gray8"
+        android:textSize="@dimen/size_16sp"
+        tools:text="دوست دارم از ته دل بگین که علم بهتر است یا ثروت ؟" />
+
+</RelativeLayout>

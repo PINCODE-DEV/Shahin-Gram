@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_mainActivity_fragmentParent"
+    tools:context=".MainActivity">
+
+    <com.fxn.BubbleTabBar
+        android:layout_alignParentBottom="true"
+        android:id="@+id/main_bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:elevation="@dimen/size_18dp"
+        android:background="@drawable/shape_bottom_nav"
+        android:padding="6dp"
+        app:bubbletab_menuResource="@menu/bottom_nav_menu"
+        app:bubbletab_custom_font="@font/app_font"
+        app:bubbletab_disabled_icon_color="@color/gray6"
+        app:bubbletab_horizontal_padding="20dp"
+        app:bubbletab_icon_size="18dp"
+        app:bubbletab_title_size="14sp"
+        app:bubbletab_icon_padding="4dp"
+        app:bubbletab_vertical_padding="10dp">
+    </com.fxn.BubbleTabBar>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:background="@color/gray2"
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:navGraph="@navigation/nav_graph"
+        app:defaultNavHost="true"/>
+
+</RelativeLayout>

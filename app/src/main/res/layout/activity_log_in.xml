@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LogIn.LogInActivity">
+
+    <ImageView
+        android:id="@+id/img_logInActivity_logo"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/size_48dp"
+        android:src="@drawable/ic_instagram_logo" />
+
+    <TextView
+        android:id="@+id/txt_logInActivity_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_logInActivity_logo"
+        android:layout_marginTop="@dimen/size_24dp"
+        android:fontFamily="@font/instagram_font"
+        android:gravity="center"
+        android:text="@string/shahin_gram"
+        android:textColor="@color/black"
+        android:textSize="@dimen/insta_logo_size" />
+
+    <TextView
+        android:id="@+id/txt_logInUpActivity_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_logInActivity_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/size_12dp"
+        android:text="Log in into Shahin-Gram"
+        android:textColor="@color/gray5"
+        android:textSize="@dimen/size_18sp" />
+
+    <EditText
+        android:singleLine="true"
+        android:layout_below="@+id/txt_logInUpActivity_text"
+        android:id="@+id/edt_logInActivity_username"
+        android:textSize="@dimen/size_16sp"
+        android:padding="@dimen/size_15dp"
+        android:background="@drawable/shape_edt_login"
+        android:layout_marginTop="@dimen/size_24dp"
+        android:layout_marginLeft="@dimen/size_18dp"
+        android:layout_marginRight="@dimen/size_18dp"
+        android:hint="@string/edt_username_hint"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/size_18dp"
+        android:layout_marginRight="@dimen/size_18dp"
+        android:layout_marginLeft="@dimen/size_18dp"
+        android:layout_below="@+id/edt_logInActivity_username"
+        android:id="@+id/ll_logInActivity_password"
+        android:background="@drawable/shape_edt_login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:inputType="textPassword"
+            android:paddingLeft="@dimen/size_15dp"
+            android:background="@null"
+            android:singleLine="true"
+            android:id="@+id/edt_logInActivity_password"
+            android:textSize="@dimen/size_16sp"
+            android:hint="@string/password"
+            android:layout_width="0dp"
+            android:layout_weight="0.85"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:padding="@dimen/size_12dp"
+            android:gravity="center"
+            android:layout_weight="0.15"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:src="@drawable/ic_hide_pass"
+                android:id="@+id/img_logInActivity_showPass"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_logInActivity_logIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_logInActivity_password"
+        android:layout_marginLeft="@dimen/size_18dp"
+        android:layout_marginTop="@dimen/size_18dp"
+        android:layout_marginRight="@dimen/size_18dp"
+        android:backgroundTint="@color/blue_disable"
+        android:enabled="false"
+        android:padding="15dp"
+        android:text="@string/log_in"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size_16sp" />
+
+    <View
+        android:id="@+id/vw_logInActivity_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/btn_logInActivity_logIn"
+       android:layout_marginRight="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="@dimen/size_16dp"
+        android:layout_marginBottom="@dimen/size_16dp"
+        android:background="@color/gray3" />
+
+    <TextView
+        android:id="@+id/txt_logInActivity_signUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vw_logInActivity_line"
+        android:layout_centerHorizontal="true"
+        android:text="Dont have account? Sign up."
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/size_16sp" />
+</RelativeLayout>

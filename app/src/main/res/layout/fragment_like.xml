@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        app:elevation="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <FrameLayout
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:background="@color/gray2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_56dp">
+
+            <TextView
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/size_8dp"
+                android:textSize="@dimen/size_18sp"
+                android:textColor="@color/black"
+                android:text="Likes &amp; Followers"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                tools:ignore="HardcodedText" />
+
+        </FrameLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="@dimen/size_8dp"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:id="@+id/rv_likeFragment_myFollowers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
